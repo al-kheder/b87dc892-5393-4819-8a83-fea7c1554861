@@ -1,0 +1,29 @@
+<div class="box mt-5">
+
+  <div class="my-2 w-25">
+    <label for="" class="my-1">Select a Country: </label>
+    <select name="" id="" class="form-control" >
+      <option value="all" selected>All</option>
+      <option ></option>
+
+    </select>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 col-sm-12" *ngFor="let item of events">
+      <div class="item">
+        <img [src]="item.flyerFront" alt="" />
+        <div class="body">
+          <h4>{{item.title}}</h4>
+          <p>{{item.startTime | date}}</p>
+          <p>{{item.endTime | date}}</p>
+        </div>
+        <div class="px-3 mb-2 d-flex justify-content-between align-items-center" >
+          <button class="btn btn-success">Add To cart</button>
+          <span><a href="item.venue.direction" target="_blank" >location</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
