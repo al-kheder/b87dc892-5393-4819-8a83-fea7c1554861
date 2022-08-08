@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="content">
+    <label> select Country: </label>
+    <select
+      class="form-control selected-field"
+      [(ngModel)]="countrySelected"
+      (ngModelChange)="onCountryselected($event)"
+    >
+      <option [value]="country.iso2" *ngFor="let country of listCountry">
+        {{ country.name }}
+      </option>
+    </select>
+    <label> select City: </label>
+    <select [(ngModel)]="citySelected" class="form-control selected-field">
+      <option [value]="city.name" *ngFor="let city of liststate">
+        {{ city.name }}
+      </option>
+    </select>
+
+    <div></div>
+    <span class="datepicker">Date range</span>
+  </div>
+</div>

@@ -7,9 +7,9 @@ import { HttpClient } from '@angular/common/http';
 export class EventService {
   constructor(private http: HttpClient) {}
 
-  getAllEvents() {
+  getAllEvents(country:string,city:string) {
     return this.http.get(
-      'https://tlv-events-app.herokuapp.com/events/uk/london'
+      `https://tlv-events-app.herokuapp.com/events/${country}/${city}`
     );
   }
 }
